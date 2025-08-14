@@ -16,7 +16,7 @@ class Registro_libro:
         self.libro = {}
 
 
-    def registro_libro(self):
+    def registro(self):
         try:
             codigo=input("ingrese codigo de libro")
             if codigo in self.libro:
@@ -31,6 +31,19 @@ class Registro_libro:
 
         except ValueError:
             print("dato incorrecto")
+
+    def pre_libro(self):
+        if not self.libro:
+            print("no hay libros regitrados")
+            return
+
+        co = input("ingrese codigo de libro a prestar")
+        if co in self.libro:
+             print("libro encontrado")
+        else:
+            print("no aparece el libro registrado")
+
+
 
 
 class estudiante:
@@ -79,6 +92,19 @@ class RegistroEstudiantes:
             print("Estudiante eliminado.\n")
         else:
             print("Estudiante no encontrado.\n")
+
+    def prestar(self):
+        if not self.Estudiantes:
+             print("No hay estudiantes registrados.\n")
+             return
+        car=input("ingrese carnet de estudiante")
+        if car in self.Estudiantes:
+            print("estudiante encontrado")
+        else:
+            print("estudiante no registrado ")
+
+
+
 
 
 def menu():
