@@ -13,6 +13,7 @@ class Registro_libro:
     def __init__(self):
         self.libro = {}
 
+
 class estudiante:
     def __init__(self,carnet,nombre,carrera ):
         self.carnet = carnet
@@ -25,7 +26,6 @@ class estudiante:
 
 class RegistroEstudiantes:
     def __init__(self):
-
         self.Estudiantes = {}
 
     def agregar(self):
@@ -62,12 +62,36 @@ class RegistroEstudiantes:
             print("Estudiante no encontrado.\n")
 
 
-
-registro = RegistroEstudiantes()
-
 def menu():
     print("=======menu principal======")
-    print("1.  ")
-    print("2. ")
-    print("3. ")
-    print("4. ")
+    print("1. regitro de libros ")
+    print("2. registro de estudiante")
+    print("3. buscar libro")
+    print("4. buscar esudiante ")
+    print("5. salir")
+
+
+registro = RegistroEstudiantes()
+op=0
+
+while op!=5:
+    menu()
+    try:
+        op=int(input("ingrese una opcion a ejecutar"))
+        match op:
+            case 1:
+                pass
+            case 2:
+
+            case 3:
+                pass
+            case 4:
+                pass
+            case 5:
+                print("fin del progrma")
+            case _:
+                print("has ingresado una opcion invalida")
+    except ValueError:
+        print("has ingresado un dato invlido")
+
+
